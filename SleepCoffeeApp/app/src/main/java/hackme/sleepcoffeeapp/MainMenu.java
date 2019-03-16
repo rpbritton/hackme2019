@@ -18,19 +18,23 @@ public class MainMenu extends AppCompatActivity {
 
 
     public void OnClickForSleep(View v) {
-        Intent ForSleep = new Intent(this, CoffeeForSleep.class);
+        Intent CoffeeForSleep = new Intent(this, CoffeeForSleep.class);
+        startActivity(CoffeeForSleep);
     }
 
     public void OnClickEnterCoffee(View v) {
-        Intent ForSleep = new Intent(this, CoffeeForSleep.class);
+        Intent EnterCoffee = new Intent(this, EnterCoffee.class);
+        startActivity(EnterCoffee);
     }
 
     public void OnClickTillSleep(View v) {
-        Intent ForSleep = new Intent(this, CoffeeForSleep.class);
+        Intent TimeTillSleep = new Intent(this, TimeTillSleep.class);
+        startActivity(TimeTillSleep);
     }
 
     public void OnClickSignIn(View v) {
-        Intent ForSleep = new Intent(this, CoffeeForSleep.class);
+        Intent SignIn = new Intent(this, SignIn.class);
+        startActivity(SignIn);
     }
 
 }

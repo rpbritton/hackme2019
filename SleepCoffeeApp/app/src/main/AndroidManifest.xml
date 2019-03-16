@@ -19,7 +19,9 @@
         <activity android:name=".EnterCoffee" />
         <activity android:name=".TimeTillSleep" />
         <activity android:name=".CoffeeForSleep" />
-        <activity android:name=".SignIn"></activity>
+        <activity android:name=".SignIn" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".IntroScreen"></activity>
     </application>
 
 </manifest>
