@@ -1,0 +1,20 @@
+button {
+    height: 40px;
+    padding: 5px 20px;
+    margin: 5px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    background-color: rgba(var(--colorFore), 0.2);
+    color: rgb(var(--colorBack));
+    font-family: 'Source Code Pro', monospace;
+}
+
+header > * > h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(var(--colorBack));
+    height: 40px;
+    margin: 5px 20px;
+    line-height: 40px;
+    font-size: 25px;
+}
