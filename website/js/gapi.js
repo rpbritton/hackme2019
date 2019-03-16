@@ -14,9 +14,11 @@ function signInStatusUpdate(isSignedIn) {
 
                 setTimeout(() => {
                     document.getElementById('sign_out').style.opacity = '1';
-                }, 5);
+                }, 10);
             }, 400);
         });
+
+        startRecording();
     }
     else {
         document.getElementById('sign_out').style.opacity = '0';
@@ -27,8 +29,10 @@ function signInStatusUpdate(isSignedIn) {
 
             setTimeout(() => {
                 document.getElementById('sign_in').style.opacity = '1';
-            }, 5);
+            }, 10);
         }, 400);
+
+        stopRecording();
     }
 }
 

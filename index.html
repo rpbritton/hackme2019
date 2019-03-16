@@ -21,10 +21,36 @@
                 </div>
             </div>
         </header>
-        <main></main>
-        <footer></footer>
+        <main>
+            <table>
+                <tr>
+                    <th>Drink Type</th>
+                    <th>Amount Consumed</th>
+                    <th>Time of Consumption</th>
+                    <th>Edit</th>
+                </tr>
+                <tr>
+                    <td class="sourceType">
+                        <select>
+                            <option value="coffee">Coffee</option>
+                            <option value="redbull">Red Bull</option>
+                            <option value="5hourenergy">5 Hour Energy</option>
+                        </select>
+                    </td>
+                    <td class="sourceAmount"><input type=number></td>
+                    <td class="sourceTime"><input type=time></td>
+                    <td class="sourceBtn"><input type=submit value="Add" onclick="addRecording(this.parentElement.parentElement)"></td>
+                </tr>
+            </table>
+        </main>
+        <footer>
+            <a>Methodology</a>
+            <a href="website/privacypolicy.html">Privacy Policy</a>
+            Copyright
+        </footer>
     </body>
     <script src="website/js/jquery-3.3.1.min.js"></script>
+    <script src="website/js/data.js"></script>
     <script src="website/js/gapi.js"></script>
     <script async defer src="https://apis.google.com/js/api.js"
       onload="this.onload = function(){}; gapiLoaded()"

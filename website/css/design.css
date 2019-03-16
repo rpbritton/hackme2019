@@ -1,3 +1,7 @@
+header {
+    box-shadow: 0px 0px 5px rgba(var(--colorFore), 0.5);
+}
+
 button {
     height: 40px;
     padding: 5px 20px;
@@ -35,4 +39,63 @@ button {
     color: rgb(var(--colorBack));
     line-height: 40px;
     margin: 10px;
+}
+
+table {
+    margin: 30px auto;
+    border-radius: 2px;
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: solid 2px rgba(var(--colorFore), 0.1);
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(var(--colorFore));
+    text-align: center;
+}
+
+th {
+    background-color: rgba(var(--colorFore), 0.2);
+    color: rgb(var(--colorFore));
+    border: solid 2px rgba(var(--colorFore), 0.2);
+    height: 25px;
+}
+
+td {
+    height: 50px;
+}
+
+input[type=text], select {
+    font-family: 'Source Sans Pro', sans-serif;
+    outline-color: rgb(var(--colorAccent));
+    border-color: rgba(var(--colorFore), 0.3);
+}
+
+input[type=submit] {
+    outline: none;
+    border: none;
+    box-shadow: 0px 1px 2px rgba(var(--colorFore), 0.2);
+    background-color: rgb(var(--colorAccent));
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(var(--colorBack));
+    padding: 5px 15px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+footer {
+    font-family: 'Source Code Pro', monospace;
+    color: rgba(var(--colorBack), 0.5);
+}
+
+footer > * {
+    text-decoration: none;
+    color: rgba(var(--colorBack), 0.5);
+    transition: 300ms;
+}
+
+footer > a:hover {
+    color: rgba(var(--colorBack), 0.8);
+    cursor: pointer;
 }
