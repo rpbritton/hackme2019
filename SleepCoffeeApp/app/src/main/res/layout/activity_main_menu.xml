@@ -6,13 +6,39 @@
     android:layout_height="match_parent"
     tools:context="hackme.sleepcoffeeapp.MainMenu">
 
-    <TextView
+    <Button
+        android:id="@+id/ForSleep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:onClick="OnClickForSleep"
+        android:text="Calculate Coffee for Sleep"
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="122dp" />
 
+    <Button
+        android:id="@+id/TillSleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnClickTillSleep"
+        android:text="Time Until Sleep"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <Button
+        android:id="@+id/EnterCoffee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnClickEnterCoffee"
+        android:text="Enter Coffee"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="356dp" />
+
+    <Button
+        android:id="@+id/SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnClickSignIn"
+        android:text="Sign In to Save"
+        tools:layout_editor_absoluteX="37dp"
+        tools:layout_editor_absoluteY="2dp" />
 </android.support.constraint.ConstraintLayout>
