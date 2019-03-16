@@ -22,3 +22,17 @@ button {
     line-height: 40px;
     font-size: 25px;
 }
+
+#sign_in, #sign_out {
+    transition: opacity 400ms;
+    opacity: 0;
+}
+
+#sign_out > span {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(var(--colorBack));
+    line-height: 40px;
+    margin: 10px;
+}

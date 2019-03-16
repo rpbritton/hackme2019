@@ -1,19 +1,34 @@
 function signIn() { gapi.auth2.getAuthInstance().signIn(); }
 function signOut() { gapi.auth2.getAuthInstance().signOut(); }
 
-function signInStatusUpdate() {
-    if (gapi.auth2.getAuthInstance().isSignedIn.get()) {
-        console.log(gapi.client);
-        // gapi.client.profile.get().then(response => {
-        //     document.getElementById('sign_in').querySelector('span').innerHTML = response.result.names[0].givenName;
-        // });
+function signInStatusUpdate(isSignedIn) {
+    if (isSignedIn) {
+        $.get('https://www.googleapis.com/oauth2/v1/userinfo?access_token=' +gapi.client.getToken().access_token, result => {
+            document.querySelector('#sign_out > span').innerHTML = result.name;
 
-        document.getElementById('sign_in').style.display = 'none';
-        document.getElementById('sign_out').style.display = 'block';
+            document.getElementById('sign_in').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('sign_in').style.display = 'none';
+                document.getElementById('sign_out').style.opacity = '0';
+                document.getElementById('sign_out').style.display = 'inline-block';
+
+                setTimeout(() => {
+                    document.getElementById('sign_out').style.opacity = '1';
+                }, 5);
+            }, 400);
+        });
     }
     else {
-        document.getElementById('sign_in').style.display = 'block';
-        document.getElementById('sign_out').style.display = 'none';
+        document.getElementById('sign_out').style.opacity = '0';
+        setTimeout(() => {
+            document.getElementById('sign_out').style.display = 'none';
+            document.getElementById('sign_in').style.opacity = '0';
+            document.getElementById('sign_in').style.display = 'inline-block';
+
+            setTimeout(() => {
+                document.getElementById('sign_in').style.opacity = '1';
+            }, 5);
+        }, 400);
     }
 }
 
@@ -25,7 +40,7 @@ function gapiLoaded() {
             scope: 'profile https://www.googleapis.com/auth/drive.appdata'
         })
         .then(() => {
-            signInStatusUpdate();
+            signInStatusUpdate(gapi.auth2.getAuthInstance().isSignedIn.get());
 
             gapi.auth2.getAuthInstance().isSignedIn.listen(signInStatusUpdate);
         });
