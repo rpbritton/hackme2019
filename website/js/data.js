@@ -17,7 +17,7 @@ function stopRecording() {
 // }, 1000);
 
 function saveRecording() {
-    
+    $
 }
 
 function addRecording(el) {
