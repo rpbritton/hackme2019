@@ -99,3 +99,16 @@ footer > a:hover {
     color: rgba(var(--colorBack), 0.8);
     cursor: pointer;
 }
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: inline-block;
+}
+
+h1 {
+    font-family: 'Source Code Pro', monospace;
+}
+
+#THISISGREAT { 
+    width: 500px;
+}

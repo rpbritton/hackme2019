@@ -18,7 +18,9 @@ function signInStatusUpdate(isSignedIn) {
             }, 400);
         });
 
-        startRecording();
+        gapi.client.load('drive', 'v3', result => {
+            startRecording();
+        });
     }
     else {
         document.getElementById('sign_out').style.opacity = '0';
