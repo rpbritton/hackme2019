@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context="hackme.sleepcoffeeapp.SignIn">
 
+    <Button
+        android:id="@+id/SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="service"
+        android:text="Sign In"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="137dp" />
 </android.support.constraint.ConstraintLayout>
