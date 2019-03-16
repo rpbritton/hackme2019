@@ -1,0 +1,17 @@
+body {
+    --colorFore: 24, 24, 24;
+    --colorBack: 216, 216, 216;
+    --colorAccent: 161, 105, 70;
+}
+
+header {
+    background-color: rgb(var(--colorAccent));
+}
+
+main {
+    background-color: rgb(var(--colorBack));
+}
+
+footer {
+    background-color: rgb(var(--colorFore));
+}
