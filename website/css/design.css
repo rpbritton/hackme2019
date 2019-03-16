@@ -2,17 +2,21 @@ button {
     height: 40px;
     padding: 5px 20px;
     margin: 5px;
-    border-radius: 2px;
+    border-radius: 5px;
     border: none;
     outline: none;
     background-color: rgba(var(--colorFore), 0.2);
     color: rgb(var(--colorBack));
     font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
 }
 
-header > * > h1 {
+#btn_home {
     font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
     color: rgb(var(--colorBack));
+    display: inline-block;
+    text-decoration: none;
     height: 40px;
     margin: 5px 20px;
     line-height: 40px;

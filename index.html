@@ -9,15 +9,24 @@
     <body>
         <header>
             <div id="headerLeft">
-                <h1>Sleep Coffee Website</h1>
+                <a id="btn_home" href="index.html">Sleep Coffee Website</a>
             </div>
             <div id="headerRight">
-                <button id="btn_sign_in">SIGN IN</button>
+                <div id="sign_in" style="display: none">
+                    <button onclick="signIn()">SIGN IN</button>
+                </div>
+                <div id="sign_out" style="display: none">
+                    <span>Account Name</span>
+                    <button onclick="signOut()">SIGN OUT</button>
+                </div>
             </div>
         </header>
         <main></main>
         <footer></footer>
     </body>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <!-- <script src="website/main.js" type=module></script> -->
+    <script src="website/js/gapi.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload = function(){}; gapiLoaded()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
 </html>
